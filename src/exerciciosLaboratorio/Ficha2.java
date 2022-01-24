@@ -38,6 +38,8 @@ public class Ficha2
 		double fatorial = factor(n);
 		System.out.println("O exponencial n é: "+ fatorial);
 		consola.close();
+		
+		System.out.println("----------------------------------------------------");
 	}
 	
 	public static double areaTriang(double aAlturaTriang, double aBaseTriang) 
@@ -66,7 +68,7 @@ public class Ficha2
 		}
 	}
 		
-	public static int factor(int fat) 
+	public static double factor(int fat) 
 	{
 		int i, resultado = 1;
 		for (i=1;i<=fat;i++)
@@ -74,5 +76,15 @@ public class Ficha2
 			resultado=resultado*i;
 		 }
 		return resultado;
+	}
+	
+	public static double factorRecursivo(int fatRecursivo) 
+	{
+		int i, resultadoRecursivo = 1;
+		for (i=1;i>=fatRecursivo;i--)
+		 {
+			resultadoRecursivo=resultadoRecursivo*i;
+		 }
+		return resultadoRecursivo;
 	}
 }
