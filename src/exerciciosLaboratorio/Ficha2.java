@@ -8,7 +8,7 @@ public class Ficha2
 	{
 		Scanner consola = new Scanner(System.in);
 		
-		System.out.println("Indique a altura do triângulo");
+		/**/System.out.println("Indique a altura do triângulo");
 		double alturaTriangulo = consola.nextInt();
 		System.out.println("Indique a base do triângulo");
 		double baseTriangulo = consola.nextInt();
@@ -47,20 +47,22 @@ public class Ficha2
 		int n2 = consola.nextInt();
 		double fatorialRecursivo = factorRecursivo(n2);
 		System.out.println("O exponencial recursivo de n2 é: "+ fatorialRecursivo);
+		
+		System.out.println("----------------------------------------------------");
+		System.out.println("Digite sua frase:");
+        String frase = consola.nextLine();
 		consola.close();
 	}
 	
 	public static double areaTriang(double aAlturaTriang, double aBaseTriang) 
 	{
 		double areaTriangulo = (aAlturaTriang*aBaseTriang)/2;
-
 		return areaTriangulo;
 	}
 	
 	public static double areaRetang(double aAlturaRetang, double aComprimentoRetang) 
 	{
 		double areaRetang = aAlturaRetang*aComprimentoRetang;
-
 		return areaRetang;
 	}
 	
@@ -96,5 +98,11 @@ public class Ficha2
 		{
 			return fatRecursivo * factor(fatRecursivo - 1);
 		}
+	}
+	
+	public static String numTotalVogal(int aTotalVogal) 
+	{
+		String vogais = myWords.replaceAll ( " ? ( I) [^ aeiou ]" , "") ; 
+		aTotalVogal = vogais.length();
 	}
 }
