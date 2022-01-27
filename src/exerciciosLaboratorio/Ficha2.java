@@ -8,7 +8,7 @@ public class Ficha2
 	{
 		Scanner consola = new Scanner(System.in);
 		
-		/**/System.out.println("Indique a altura do triângulo");
+		/*System.out.println("Indique a altura do triângulo");
 		double alturaTriangulo = consola.nextInt();
 		System.out.println("Indique a base do triângulo");
 		double baseTriangulo = consola.nextInt();
@@ -49,6 +49,12 @@ public class Ficha2
 		System.out.println("O exponencial recursivo de n2 é: "+ fatorialRecursivo);
 		
 		System.out.println("----------------------------------------------------");
+		System.out.println("Digite sua frase:");
+        String frase = consola.nextLine().toLowerCase();
+        int totalVogais = numTotalVogal(frase);
+        System.out.println("A sua frase possui " + totalVogais + " vogais");*/
+		
+        System.out.println("----------------------------------------------------");
 		System.out.println("Digite sua frase:");
         String frase = consola.nextLine();
 		consola.close();
@@ -100,9 +106,20 @@ public class Ficha2
 		}
 	}
 	
-	public static String numTotalVogal(int aTotalVogal) 
+	public static int numTotalVogal(String aFrase1) 
 	{
-		String vogais = myWords.replaceAll ( " ? ( I) [^ aeiou ]" , "") ; 
-		aTotalVogal = vogais.length();
+		int count = 0;
+		for (int i=0 ; i<aFrase1.length(); i++)
+		{
+			char ch = aFrase1.charAt(i);
+	        if(ch == 'a'|| ch == 'e'|| ch == 'i' ||ch == 'o' ||ch == 'u')
+	        {count ++;}
+	     }
+		return count;
+	}
+	
+	public static int numVogais(String aFrase2) 
+	{
+		return 0;
 	}
 }
