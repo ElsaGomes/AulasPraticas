@@ -28,18 +28,26 @@ public class Ficha2
 		
 		System.out.println("Indique o valor de z");
 		int z = consola.nextInt();
-		double areaCal = areaCal(areaTriangulo, areaRetangulo, z);
+		System.out.println("Indique o valor de x");
+		int x = consola.nextInt();
+		System.out.println("Indique o valor de y");
+		int y = consola.nextInt();
+		double areaCal = areaCal(x, y, z);
 		System.out.println("A área da figura é " + areaCal); 
 		
 		System.out.println("----------------------------------------------------");
 		
 		System.out.println("Indique o valor do fatorial n");
-		int n = consola.nextInt();
-		double fatorial = factor(n);
-		System.out.println("O exponencial n é: "+ fatorial);
-		consola.close();
+		int n1 = consola.nextInt();
+		double fatorial = factor(n1);
+		System.out.println("O exponencial n1 é: "+ fatorial);
 		
 		System.out.println("----------------------------------------------------");
+		System.out.println("Indique o valor do fatorial recursivo de n2");
+		int n2 = consola.nextInt();
+		double fatorialRecursivo = factorRecursivo(n2);
+		System.out.println("O exponencial recursivo de n2 é: "+ fatorialRecursivo);
+		consola.close();
 	}
 	
 	public static double areaTriang(double aAlturaTriang, double aBaseTriang) 
@@ -60,11 +68,11 @@ public class Ficha2
 	{
 		if (aZ==1)
 		{
-			return aX;
+			return areaTriang(aX, aY);
 		}
 		else
 		{
-			return aY;
+			return areaRetang(aX, aY);
 		}
 	}
 		
@@ -80,11 +88,13 @@ public class Ficha2
 	
 	public static double factorRecursivo(int fatRecursivo) 
 	{
-		int i, resultadoRecursivo = 1;
-		for (i=1;i>=fatRecursivo;i--)
-		 {
-			resultadoRecursivo=resultadoRecursivo*i;
-		 }
-		return resultadoRecursivo;
+		if (fatRecursivo == 0)
+		{
+			return 1;
+		}
+		else
+		{
+			return fatRecursivo * factor(fatRecursivo - 1);
+		}
 	}
 }
