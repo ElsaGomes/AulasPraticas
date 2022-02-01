@@ -14,18 +14,16 @@ public class Ficha2
 		double baseTriangulo = consola.nextInt();
 		double areaTriangulo = areaTriang (alturaTriangulo, baseTriangulo);
 		System.out.println("A área do triângulo é " + areaTriangulo);
-		
-		System.out.println("----------------------------------------------------");
-		
+				
+		System.out.println("\n");
+				
 		System.out.println("Indique a altura do retângulo");
 		double alturaRetangulo = consola.nextInt();
 		System.out.println("Indique o comprimento do retângulo");
 		double comprimentoRetangulo = consola.nextInt();
 		double areaRetangulo = areaRetang (alturaRetangulo, comprimentoRetangulo);
 		System.out.println("A área do retângulo é " + areaRetangulo);
-		
-		System.out.println("----------------------------------------------------");
-		
+				
 		System.out.println("Indique o valor de z");
 		int z = consola.nextInt();
 		System.out.println("Indique o valor de x");
@@ -34,28 +32,23 @@ public class Ficha2
 		int y = consola.nextInt();
 		double areaCal = areaCal(x, y, z);
 		System.out.println("A área da figura é " + areaCal); 
-		
-		System.out.println("----------------------------------------------------");
-		
+				
 		System.out.println("Indique o valor do fatorial n");
 		int n1 = consola.nextInt();
 		double fatorial = factor(n1);
 		System.out.println("O exponencial n1 é: "+ fatorial);
 		
-		System.out.println("----------------------------------------------------");
 		System.out.println("Indique o valor do fatorial recursivo de n2");
 		int n2 = consola.nextInt();
 		double fatorialRecursivo = factorRecursivo(n2);
 		System.out.println("O exponencial recursivo de n2 é: "+ fatorialRecursivo);
 		
-		System.out.println("----------------------------------------------------");
-		System.out.println("Digite sua frase:");
+		System.out.println("Digite a sua frase:");
         String frase = consola.nextLine().toLowerCase();
         int totalVogais = numTotalVogal(frase);
         System.out.println("A sua frase possui " + totalVogais + " vogais");*/
 		
-        System.out.println("----------------------------------------------------");
-		System.out.println("Digite sua frase:");
+		System.out.println("Digite a sua frase:");
         String frase = consola.nextLine();
 		consola.close();
 	}
