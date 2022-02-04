@@ -55,7 +55,7 @@ public class Ficha2
 		System.out.println("Insira uma frase:");
         String frase2 = consola.nextLine().toLowerCase();
         numVogais(frase2);
-        System.out.println("\n");*/
+        */
 		
 		System.out.println("Insira o número de segundos:");
         int segundos = consola.nextInt();
