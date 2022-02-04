@@ -8,7 +8,7 @@ public class Ficha2
 	{
 		Scanner consola = new Scanner(System.in);
 		
-		/*System.out.println("Indique a altura do triângulo");
+		/**/System.out.println("Indique a altura do triângulo");
 		double alturaTriangulo = consola.nextInt();
 		System.out.println("Indique a base do triângulo");
 		double baseTriangulo = consola.nextInt();
@@ -55,7 +55,7 @@ public class Ficha2
 		System.out.println("Insira uma frase:");
         String frase2 = consola.nextLine();
         numVogais(frase2);
-        System.out.println(" ");*/
+        System.out.println(" ");
 		
 		System.out.println("Insira o número de segundos:");
         int segundos = consola.nextInt();
