@@ -2,19 +2,23 @@ package ficha3;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class ContaBancaria 
 {
 	private String titular;
 	private double saldo; //valor inicial = 0.0
 	private Date dataAbertura; //data de hoje 
+	private List<ContaBancaria>contas;
 	
 	public ContaBancaria(String aTitular) 
 	{
 		titular = aTitular;
 		saldo = 0.0;
 		dataAbertura = new Date();
+		contas = new ArrayList<ContaBancaria>();
 	}
 
 	public ContaBancaria(String aTitular, double aSaldo) 
@@ -72,4 +76,14 @@ public class ContaBancaria
 			System.out.println("Valor impossível de levantar.");
 		}
 	}
+
+	public List<ContaBancaria> getContas() 
+	{
+		return contas;
+	}
+
+	public void setContas(List<ContaBancaria> contas) {
+		this.contas = contas;
+	}
+	
 }

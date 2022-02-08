@@ -61,8 +61,7 @@ public class Ficha2
         int segundos = consola.nextInt();
 		convertSeconds(segundos);
 		consola.close();
-	}
-	
+	}	
 	public static double areaTriang(double aAlturaTriang, double aBaseTriang) 
 	{
 		double areaTriangulo = (aAlturaTriang*aBaseTriang)/2;
