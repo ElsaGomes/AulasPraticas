@@ -8,7 +8,6 @@ public class Casa
 	
 	public Casa() 
 	{	
-		
 	}
 
 	public Casa(String aMorada) 
@@ -46,13 +45,15 @@ public class Casa
 		precoVenda = aPrecoVenda;
 	}
 	
-	public void getLucro(double aLucro) 
+	public double getLucro() 
 	{
-		aLucro = precoVenda - precoCusto;
+		double aLucro = precoVenda - precoCusto;
+		return aLucro;
 	}
 	
-	public void getPercentMargemLucro(double aPercentMargemLucro) 
+	public double getPercentMargemLucro() 
 	{
-		aPercentMargemLucro = precoVenda / precoCusto;
+		double aPercentMargemLucro = precoVenda / precoCusto;
+		return aPercentMargemLucro;
 	}
 }

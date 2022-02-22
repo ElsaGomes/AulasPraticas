@@ -7,7 +7,6 @@ public class Main
 		Banco banco1 = new Banco("Santander");
 		ContaBancaria conta1 = new ContaBancaria("Elsa Gomes");
 		ContaBancaria conta2 = new ContaBancaria("Elsa Perez", 572.8);
-		
 		banco1.criaConta(conta1);
 		banco1.criaConta(conta2);
 		
@@ -24,11 +23,15 @@ public class Main
 		conta2.levantar(563.8);
 		System.out.println(conta2.getInformacaoConta());
 		
+		System.out.println("Insira o nome do titular");
 		System.out.println(banco1.getConta("Elsa Gomes"));
 		
 		Casa casa1 = new Casa("Funchal");
 		Casa casa2 = new Casa();
 		Casa casa3 = new Casa("Cancela");
+		banco1.criaCasa(casa1);
+		banco1.criaCasa(casa2);
+		banco1.criaCasa(casa3);
 		
 		casa1.setPrecoCusto(1500);
 		casa1.setPrecoVenda(1000);
@@ -36,5 +39,10 @@ public class Main
 		casa2.setPrecoVenda(3500);
 		casa3.setPrecoCusto(10000);
 		casa3.setPrecoVenda(10500);
+		System.out.println("O preço de venda é: " + casa1.getPrecoVenda());
+		System.out.println("O lucro da venda é: " + casa1.getLucro());
+		
+		banco1.removerCasa(casa1);
+		banco1.getLucroPrevisto();
 	}
 }

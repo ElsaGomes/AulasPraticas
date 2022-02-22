@@ -7,11 +7,14 @@ public class Banco
 {
 	private String nome;
 	private List<ContaBancaria>contas;
-
+	private List<Casa>casas;
+	//private double lucroPrevisto;
+	
 	public Banco(String aNome) 
 	{
 		nome = aNome;
 		contas = new ArrayList<ContaBancaria>(100);
+		casas = new ArrayList<Casa>();
 	}
 
 	public String getNome() 
@@ -34,6 +37,16 @@ public class Banco
 		contas = aContas;
 	}
 	
+	public List<Casa> getCasas() 
+	{
+		return casas;
+	}
+
+	public void setCasas(List<Casa> aCasas) 
+	{
+		casas = aCasas;
+	}
+
 	public void criaConta(ContaBancaria aContas) 
 	{
 		contas.add(aContas);
@@ -49,5 +62,43 @@ public class Banco
 			}
 		}
 		return null;
+	}
+	
+	public void criaCasa(Casa aCasas) 
+	{
+		casas.add(aCasas);
+	}
+	
+	public Casa getCasa(String aMorada) 
+	{
+		for(Casa casa: casas)
+		{
+			if (casa.getMorada().equals(aMorada))
+			{
+				return casa;
+			}
+		}
+		return null;
+	}
+	
+	public void removerCasa(Casa aCasa)
+	{
+		casas.remove(aCasa);
+		System.out.println("A casa foi removida");
+	}
+	
+	public double getLucroPrevisto() 
+	{
+		double lucro = 0;
+		int i = 0;
+		for(Casa casa: casas)
+		{
+			while(i < casas.size())
+			{
+				lucro = casa.getLucro();
+				i++;
+			}
+		}
+		return lucro;
 	}
 }

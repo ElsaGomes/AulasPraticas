@@ -9,6 +9,7 @@ public class ContaBancaria
 	private String titular;
 	private double saldo; //valor inicial = 0.0
 	private Date dataAbertura; //data de hoje 
+
 	
 	public ContaBancaria(String aTitular) 
 	{
@@ -71,5 +72,6 @@ public class ContaBancaria
 		{
 			System.out.println("Valor impossível de levantar.");
 		}
-	}	
+	}
+	
 }
