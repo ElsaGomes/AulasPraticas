@@ -42,7 +42,7 @@ public class Main
 		System.out.println("O preço de venda é: " + casa1.getPrecoVenda());
 		System.out.println("O lucro da venda é: " + casa1.getLucro());
 		
-		banco1.removerCasa(casa1);
+		banco1.removerCasa("Funchal");
 		banco1.getLucroPrevisto();
 	}
 }

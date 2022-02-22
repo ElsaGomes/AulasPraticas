@@ -14,7 +14,7 @@ public class ContaBancaria
 	public ContaBancaria(String aTitular) 
 	{
 		titular = aTitular;
-		saldo = 0.0;
+		saldo = 0;
 		dataAbertura = new Date();
 	}
 

@@ -68,10 +68,14 @@ public class Banco
 		casas.add(aCasas);
 	}
 	
-	public void removerCasa(Casa aCasa)
+	public void removerCasa(String aCasa)
 	{
-		casas.remove(aCasa);
+		for(Casa casa: casas) 
+		{
+			if(casa.getMorada().equals(aCasa))
+				casas.remove(casa);
 		System.out.println("A casa foi removida");
+		}
 	}
 	
 	public double getLucroPrevisto() 
