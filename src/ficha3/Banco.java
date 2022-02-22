@@ -8,7 +8,6 @@ public class Banco
 	private String nome;
 	private List<ContaBancaria>contas;
 	private List<Casa>casas;
-	//private double lucroPrevisto;
 	
 	public Banco(String aNome) 
 	{
@@ -67,18 +66,6 @@ public class Banco
 	public void criaCasa(Casa aCasas) 
 	{
 		casas.add(aCasas);
-	}
-	
-	public Casa getCasa(String aMorada) 
-	{
-		for(Casa casa: casas)
-		{
-			if (casa.getMorada().equals(aMorada))
-			{
-				return casa;
-			}
-		}
-		return null;
 	}
 	
 	public void removerCasa(Casa aCasa)
