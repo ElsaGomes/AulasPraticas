@@ -1,6 +1,6 @@
 package ficha4;
 
-public class Fruta 
+public abstract class Fruta 
 {
 	protected String nome;
 	protected double precoBase;
