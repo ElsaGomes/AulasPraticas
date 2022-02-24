@@ -31,8 +31,5 @@ public abstract class Fruta
 		precoBase = aPrecoBase;
 	}
 	
-	public double pagar() 
-	{
-		return 0;
-	}
+	public abstract double pagar();
 }
