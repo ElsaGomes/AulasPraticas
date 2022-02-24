@@ -34,16 +34,28 @@ public class Cesto
 	
 	public int totalTipoFruta(String tipo) 
 	{
-		/*int totalFrutaU = 0;
+		int totalFrutaU = 0;
+		int totalFrutaV = 0;
 		int totalFrutaP = 0;
-		int totalFrutaV = 0;*/
-			
+		
+		int totalFruta = 0;
 		for(Fruta fruta: frutas)
 		{
 			fruta.getClass().getSimpleName();
-				
+			if (fruta instanceof FrutaUnidade)
+			  {
+				totalFruta  = totalFrutaU++;
+			  }
+			else if (fruta instanceof FrutaPeso)
+			  {
+				totalFruta = totalFrutaP++;
+			  }
+			else if (fruta instanceof FrutaVolume)
+			  {
+				totalFruta = totalFrutaV++;
+			  }
 		}
-		return frutas.size();
+		return totalFruta;
 	}
 	
 	public double valorTotalTipoFruta() 
