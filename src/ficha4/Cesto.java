@@ -3,6 +3,8 @@ package ficha4;
 import java.util.ArrayList;
 import java.util.List;
 
+import Fruta.Fruta;
+
 public class Cesto 
 {
 	private int totalItens;
@@ -13,12 +15,15 @@ public class Cesto
 	{
 		frutas = new ArrayList<Fruta>();
 		maxItens = 100;
-		totalItens = 0;
 	}	
 
 	public void addFruta(Fruta aFrutas) 
 	{
-		frutas.add(aFrutas);
+		if (totalItens < maxItens)
+		{
+			frutas.add(aFrutas);
+			totalItens++;
+		}
 	}
 	
 	public double totalCesto() 

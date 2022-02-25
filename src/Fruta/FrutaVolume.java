@@ -1,4 +1,9 @@
-package ficha4;
+package Fruta;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+import ficha4.Descontavel;
 
 public class FrutaVolume extends Fruta implements Descontavel
 {
@@ -18,6 +23,7 @@ public class FrutaVolume extends Fruta implements Descontavel
 	public double descontar(double aPercentagem) 
 	{
 		double desconto = pagar() - (pagar() * aPercentagem);
-		return desconto;
+		BigDecimal bd = new BigDecimal(desconto).setScale(2, RoundingMode.HALF_EVEN);
+		return bd.doubleValue();
 	}
 }

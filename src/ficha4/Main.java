@@ -1,5 +1,9 @@
 package ficha4;
 
+import Fruta.FrutaPeso;
+import Fruta.FrutaUnidade;
+import Fruta.FrutaVolume;
+
 public class Main 
 {
 	public static void main(String args[])
@@ -36,7 +40,7 @@ public class Main
 		System.out.println("Valor total de FrutaPeso: " + cesto1.valorTotalTipoFruta("FrutaPeso")); 
 		System.out.println("Valor total de FrutaUnidade: " + cesto1.valorTotalTipoFruta("FrutaUnidade"));
 		
-		System.out.println("\nValor da compra de " + fruta5.getNome()+ " é: " + fruta5.descontar(0.2));
-		System.out.println("Valor da compra de " + fruta1.getNome()+ " é: " + fruta1.descontar(0.1));
+		System.out.println("\nValor da compra de " + fruta5.getNome()+ " é: " + fruta5.descontar(0.02));
+		System.out.println("Valor da compra de " + fruta1.getNome()+ " é: " + fruta1.descontar(0.01));
 	}
 }
