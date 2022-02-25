@@ -6,12 +6,12 @@ public class Main
 	{
 		Cesto cesto1 = new Cesto();
 		
-		FrutaVolume fruta1 = new FrutaVolume ("Maçã", 1, 5);
-		FrutaPeso fruta2 = new FrutaPeso ("Laranja", 1.5, 10); 
-		FrutaUnidade fruta3 = new FrutaUnidade ("Pêra", 0.5, 15);
-		FrutaUnidade fruta4 = new FrutaUnidade ("Romã", 1.75, 3);
-		FrutaPeso fruta5 = new FrutaPeso ("Anona", 1.45, 12); 
-		FrutaUnidade fruta6 = new FrutaUnidade ("Melancia", 1.5, 3);
+		FrutaVolume fruta1 = new FrutaVolume ("Maçã", 1, 5); //volume
+		FrutaPeso fruta2 = new FrutaPeso ("Laranja", 1.5, 10); //peso
+		FrutaUnidade fruta3 = new FrutaUnidade ("Pêra", 0.5, 15); //unidade
+		FrutaUnidade fruta4 = new FrutaUnidade ("Romã", 1.75, 3); //unidade
+		FrutaPeso fruta5 = new FrutaPeso ("Anona", 1.45, 12); //peso
+		FrutaUnidade fruta6 = new FrutaUnidade ("Melancia", 1.5, 3); //unidade
 		
 		cesto1.addFruta(fruta1);
 		cesto1.addFruta(fruta2);
@@ -31,5 +31,12 @@ public class Main
 		System.out.println("\nTotal de FrutaPeso: " + cesto1.totalTipoFruta("FrutaPeso"));
 		System.out.println("Total de FrutaUnidade: " + cesto1.totalTipoFruta("FrutaUnidade"));
 		System.out.println("Total de FrutaVolume: " + cesto1.totalTipoFruta("FrutaVolume"));
+		
+		System.out.println("\nValor total de FrutaVolume: " + cesto1.valorTotalTipoFruta("FrutaVolume")); 
+		System.out.println("Valor total de FrutaPeso: " + cesto1.valorTotalTipoFruta("FrutaPeso")); 
+		System.out.println("Valor total de FrutaUnidade: " + cesto1.valorTotalTipoFruta("FrutaUnidade"));
+		
+		System.out.println("\nValor da compra de " + fruta5.getNome()+ " é: " + fruta5.descontar(0.2));
+		System.out.println("Valor da compra de " + fruta1.getNome()+ " é: " + fruta1.descontar(0.1));
 	}
 }

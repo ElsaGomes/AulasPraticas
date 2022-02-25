@@ -1,6 +1,6 @@
 package ficha4;
 
-public class FrutaVolume extends Fruta
+public class FrutaVolume extends Fruta implements Descontavel
 {
 	private float volume;
 
@@ -13,5 +13,11 @@ public class FrutaVolume extends Fruta
 	public double pagar() 
 	{
 		return precoBase * volume;
+	}
+
+	public double descontar(double aPercentagem) 
+	{
+		double desconto = pagar() - (pagar() * aPercentagem);
+		return desconto;
 	}
 }

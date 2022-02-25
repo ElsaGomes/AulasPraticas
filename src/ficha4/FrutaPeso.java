@@ -1,6 +1,6 @@
 package ficha4;
 
-public class FrutaPeso extends Fruta
+public class FrutaPeso extends Fruta implements Descontavel
 {
 	private float peso; 
 	
@@ -13,5 +13,11 @@ public class FrutaPeso extends Fruta
 	public double pagar() 
 	{
 		return precoBase * peso;
+	}
+
+	public double descontar(double aPercentagem) 
+	{
+		double desconto = pagar() - (pagar() * aPercentagem);
+		return desconto;
 	}
 }
