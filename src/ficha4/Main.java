@@ -40,7 +40,7 @@ public class Main
 		System.out.println("Valor total de FrutaPeso: " + cesto1.valorTotalTipoFruta("FrutaPeso")); 
 		System.out.println("Valor total de FrutaUnidade: " + cesto1.valorTotalTipoFruta("FrutaUnidade"));
 		
-		System.out.println("\nValor da compra de " + fruta5.getNome()+ " é: " + fruta5.descontar(0.02));
-		System.out.println("Valor da compra de " + fruta1.getNome()+ " é: " + fruta1.descontar(0.01));
+		System.out.println("\nValor com desconto da compra de " + fruta5.getNome()+ " é: " + fruta5.descontar(0.02));
+		System.out.println("Valor com desconto da compra de " + fruta1.getNome()+ " é: " + fruta1.descontar(0.01));
 	}
 }
