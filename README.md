@@ -1,5 +1,5 @@
 # AulasPraticas
-![Diagrama UML - Ficha 3]![uml_elsa](https://user-images.githubusercontent.com/97111716/155182633-3a730028-f3c9-4b24-91cc-e8502ee1d403.jpg)
+![Diagrama UML - Ficha 3]![teste.drawio](![teste drawio](https://user-images.githubusercontent.com/97111716/156005259-e331ff83-38c7-4e02-a5a4-a5819dcf1be4.png))
 
 ## Banco
 Esta classe possui como atributos nome e as listas (de contas bancarias e de casas), que sao adicionadas ao banco. Tal como as funcoes de criaConta, que permite adicionar as contas ao banco e de criaCasa(), que permite adicionar as casas ao banco. Tem ainda como funcoes getConta(), que permite verificar, atraves do nome do titular, se a conta especificada pertence ao banco. removerCasa(), permite eliminar as casas da lista e a funcao getLucroPrevisto(), permite obter o lucro da venda de todas as casas pertencentes ao banco.
