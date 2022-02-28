@@ -73,8 +73,10 @@ public class Banco
 		for(Casa casa: casas) 
 		{
 			if(casa.getMorada().equals(aCasa))
-			casas.remove(casa);
-			System.out.println("A casa foi removida");
+			{
+				casas.remove(casa);
+				System.out.println("A casa foi removida");
+			}
 		}
 	}
 	

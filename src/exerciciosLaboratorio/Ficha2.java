@@ -117,7 +117,7 @@ public class Ficha2
 			char ch = aFrase1.charAt(i);
 	        if(ch == 'a'|| ch == 'e'|| ch == 'i' ||ch == 'o' ||ch == 'u')
 	        {count ++;}
-	     }
+	    }
 		return count;
 	}
 	
@@ -130,27 +130,23 @@ public class Ficha2
         int totalI = 0;
         int totalO = 0;
         int totalU = 0;
+        
         char ch;
         for (int i = 0; i < exemploString.length(); i++) 
         {
             ch = exemploString.charAt(i);
-            if (ch == 'a')
-                totalA++;
-			if (ch == 'e')
-                totalE++;
-            if (ch == 'i')
-                totalI++;
-            if (ch == 'o')
-                totalO++;
-            if (ch == 'u')
-                totalU++;
+            if (ch == 'a') totalA++;
+			if (ch == 'e') totalE++;
+            if (ch == 'i') totalI++;
+            if (ch == 'o') totalO++;
+            if (ch == 'u') totalU++;
         }
         System.out.println("a: " + totalA);
         System.out.println("e: " + totalE);
         System.out.println("i: " + totalI);
         System.out.println("o: " + totalO);
         System.out.println("u: " + totalU);
-	}
+	}	
 	
 	public static void convertSeconds(int aSegundos) 
 	{
