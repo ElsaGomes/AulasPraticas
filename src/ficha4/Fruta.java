@@ -1,4 +1,4 @@
-package Fruta;
+package ficha4;
 
 public abstract class Fruta 
 {

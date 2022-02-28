@@ -1,5 +1,6 @@
 package appStore;
 
-public class Loja {
+public class Loja 
+{
 
 }

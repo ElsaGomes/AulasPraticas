@@ -1,9 +1,7 @@
-package Fruta;
+package ficha4;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-
-import ficha4.Descontavel;
 
 public class FrutaVolume extends Fruta implements Descontavel
 {

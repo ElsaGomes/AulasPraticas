@@ -2,11 +2,12 @@ package appStore;
 
 public class Programador extends Utilizador
 {
-	private int classificacao;
+	private double classificacao;
 	
-	public Programador(String aNome, int aIdade, int aNumeroUtilizador) 
+	public Programador(String aNome, int aIdade, int aId, double aClassificacao) 
 	{
-		super(aNome, aIdade, aNumeroUtilizador);
+		super(aNome, aIdade, aId);
+		classificacao = aClassificacao;
 	}
 	
 	public void addApp()

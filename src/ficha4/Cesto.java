@@ -3,8 +3,6 @@ package ficha4;
 import java.util.ArrayList;
 import java.util.List;
 
-import Fruta.Fruta;
-
 public class Cesto 
 {
 	private int totalItens;
@@ -43,7 +41,9 @@ public class Cesto
 		for(Fruta fruta: frutas)
 		{
 			if(fruta.getClass().getSimpleName().equals(tipo))
-			totalFruta++;
+			{
+				totalFruta++;
+			}
 		}
 		return totalFruta;
 	}
@@ -54,24 +54,30 @@ public class Cesto
 		for(Fruta fruta: frutas)
 		{
 			if(fruta.getClass().getSimpleName().equals(tipo))
-			total += fruta.pagar();
+			{
+				total += fruta.pagar();
+			}
 		}
 		return total;
 	}
 	
-	public int getMaxItens() {
+	public int getMaxItens() 
+	{
 		return maxItens;
 	}
 
-	public void setMaxItens(int maxItens) {
-		this.maxItens = maxItens;
+	public void setMaxItens(int aMaxItens) 
+	{
+		maxItens = aMaxItens;
 	}
 
-	public int getTotalItens() {
+	public int getTotalItens() 
+	{
 		return totalItens;
 	}
 
-	public void setTotalItens(int totalItens) {
-		this.totalItens = totalItens;
+	public void setTotalItens(int aTotalItens) 
+	{
+		totalItens = aTotalItens;
 	}
 }

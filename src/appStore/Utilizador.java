@@ -2,14 +2,21 @@ package appStore;
 
 public class Utilizador 
 {
-	protected String nome;
-	protected int idade;
-	static int numeroUtilizador;
+	private String nome;
+	private int idade;
+	private static int numUtilizador = 0;
+	private int id;
 	
-	public Utilizador(String aNome, int aIdade, int aNumeroUtilizador) 
+	public Utilizador(String aNome, int aIdade, int aId) 
 	{
 		nome = aNome;
 		idade = aIdade;
-		numeroUtilizador = aNumeroUtilizador++;
+		id = numUtilizador;
+		numUtilizador +=1;
+	}
+	
+	public void comprar()
+	{
+		
 	}
 }

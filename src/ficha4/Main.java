@@ -1,9 +1,5 @@
 package ficha4;
 
-import Fruta.FrutaPeso;
-import Fruta.FrutaUnidade;
-import Fruta.FrutaVolume;
-
 public class Main 
 {
 	public static void main(String args[])
