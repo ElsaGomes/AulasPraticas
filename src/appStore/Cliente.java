@@ -2,9 +2,9 @@ package appStore;
 
 public class Cliente extends Utilizador
 {
-	public Cliente(String aNome, int aIdade, int aId) 
+	public Cliente(String aNome) 
 	{
-		super(aNome, aIdade, aId);
+		super(aNome);
 	}
 	
 	public void comprar() 
