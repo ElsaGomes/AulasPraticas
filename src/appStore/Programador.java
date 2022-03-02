@@ -1,15 +1,17 @@
 package appStore;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Programador extends Utilizador
 {
-	private double avaliacao = 0;
+	private double avaliacao;
 	private List<App>apps;
 	
-	public Programador(String aNome) 
+	public Programador(String aNome, int aIdade) 
 	{
-		super(aNome);
+		super(aNome, aIdade);
+		apps = new ArrayList<App>();
 	}
 	
 	public double getAvaliacao() 
@@ -22,8 +24,20 @@ public class Programador extends Utilizador
 		avaliacao = aAvaliacao;
 	}
 
+	public List<App> getApps() 
+	{
+		return apps;
+	}
+
+	public void setApps(List<App> aApps) 
+	{
+		apps = aApps;
+	}
+	
 	public void addApp(App aApps)
 	{
 		apps.add(aApps);
 	}
+
+	
 }
