@@ -6,64 +6,61 @@ import java.util.List;
 public class Loja 
 {
 	private List<Utilizador>utilizadores;
-
+	
 	public Loja() 
 	{
 		utilizadores = new ArrayList<Utilizador>();
 	}
 
-	public void menuStore(Loja loja)
+	public static void menuStore(Loja loja)
 	{
-		System.out.println("Menu:");
+		System.out.println("\nMenu:");
 		System.out.println("1 - Registar um novo utilizador");
 		System.out.println("2 - Registar uma nova aplicação");
 		System.out.println("3 - Lista de utilizadores");
+		System.out.println("4 - Loja de Aplicações");
+		System.out.println("5 - Sair");
 		int opcao = Main.sc.nextInt();
 	    switch (opcao) 
 	    {
 	      case 1:
-	    	  registoUtilizador(loja);
+	    	  Utilizador.registoUtilizador(loja);
 	    	  break;
-	      case 2:
 	    	  
-	        break;
+	      case 2:
+	    	  App.registoAPP(loja);
+	    	  break;
+	        
 	      case 3:
 	    	  System.out.println(loja.getDadosUtilizador());
+	    	  Utilizador.menuSairUtilizador(loja);
+	        break;
+	        
+	      case 4:
+	    	  System.out.println(loja.getDadosUtilizador());
+	        break;
+	        
+	      case 5:
+	    	  System.exit(0);
 	        break;
 	    }
 	}
 	
-	public void registoUtilizador(Loja loja)
+	public static void menuSair(Loja loja)
 	{
-		  System.out.println("\nMenu:");
-    	  System.out.println("1 - Registar novo cliente");
-    	  System.out.println("2 - Registar novo programador");
-    	  int utilizador = Main.sc.nextInt();
-    	  switch (utilizador) 
-    	  {
-    	  case 1:
-    		  System.out.println("Nome do utilizador");
-    		  String nome = Main.sc.nextLine();
-    		  Main.sc.nextLine();
-    		  System.out.println("Idade do utilizador"); 
-    		  System.out.print("2"+nome);
-    		  int idade = Main.sc.nextInt();
-    		  Main.sc.nextLine();
-    		  Cliente cliente = new Cliente(nome, idade);
-    		  loja.addUtilizador(cliente);
-    		  menuStore(loja);
-    		  break;
-  	      case 2:System.out.println("Nome do utilizador");
-    		  String nome1 = Main.sc.nextLine();
-    		  Main.sc.nextLine();
-    		  System.out.println("Idade do utilizador");
-    		  int idade1 = Main.sc.nextInt();
-    		  Main.sc.nextLine();
-    		  Programador prog = new Programador(nome1, idade1);
-    		  loja.addUtilizador(prog);
-    		  menuStore(loja);
-    		  break;
-    	  }
+		System.out.println("1 - Voltar ao Menu");
+		System.out.println("2 - Sair");
+		int opcao = Main.sc.nextInt();
+	    switch (opcao) 
+	    {
+	      case 1:
+	    	  menuStore(loja);
+	    	  break;
+	    	  
+	      case 2:
+	        System.exit(0);
+	        break;
+	    }
 	}
 	
 	public void addUtilizador(Utilizador aUtilizadores)

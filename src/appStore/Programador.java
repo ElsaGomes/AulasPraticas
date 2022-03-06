@@ -37,7 +37,5 @@ public class Programador extends Utilizador
 	public void addApp(App aApps)
 	{
 		apps.add(aApps);
-	}
-
-	
+	}	
 }

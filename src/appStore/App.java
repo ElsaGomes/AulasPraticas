@@ -14,35 +14,54 @@ public class App
 		tipo = aTipo;
 	}
 
-	public String getNome() {
+	public static void registoAPP(Programador programador)
+	{
+		System.out.println("Registo da Aplicação");
+		System.out.println("\nNome da Aplicação");
+		String nome = Main.sc.nextLine();
+		System.out.println("Preço da Aplicação");
+		double preco = Main.sc.nextDouble();
+		App app = new App(nome, preco, tipo);
+		programador.addApp(app);
+	}
+	
+	public String getNome() 
+	{
 		return nome;
 	}
 
-	public void setNome(String nome) {
+	public void setNome(String nome) 
+	{
 		this.nome = nome;
 	}
 
-	public double getPreco() {
+	public double getPreco() 
+	{
 		return preco;
 	}
 
-	public void setPreco(double preco) {
+	public void setPreco(double preco) 
+	{
 		this.preco = preco;
 	}
 
-	public double getAvaliacao() {
+	public double getAvaliacao() 
+	{
 		return avaliacao;
 	}
 
-	public void setAvaliacao(double avaliacao) {
+	public void setAvaliacao(double avaliacao) 
+	{
 		this.avaliacao = avaliacao;
 	}
 
-	public TipoApp getTipo() {
+	public TipoApp getTipo() 
+	{
 		return tipo;
 	}
 
-	public void setTipo(TipoApp tipo) {
+	public void setTipo(TipoApp tipo) 
+	{
 		this.tipo = tipo;
 	}	
 }
