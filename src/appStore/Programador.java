@@ -36,14 +36,14 @@ public class Programador extends Utilizador
 		{
 			if(app.getClass().getSimpleName().equals(Atipo))
 			{
-				App apps = new App(nomeApp, preco, tipoEnum);
+				App app1 = new App(nomeApp, preco, tipoEnum);
 			}
 			else
 			{
 				System.out.println("Tipo de Aplicação não existente, tente de novo!");
 			}
 		}
-		return apps;
+		return app1;
 	}
 	
 	public double getAvaliacao() 
