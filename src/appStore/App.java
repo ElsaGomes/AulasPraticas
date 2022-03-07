@@ -14,17 +14,6 @@ public class App
 		tipo = aTipo;
 	}
 
-	public static void registoAPP(Programador programador)
-	{
-		System.out.println("Registo da Aplicação");
-		System.out.println("\nNome da Aplicação");
-		String nome = Main.sc.nextLine();
-		System.out.println("Preço da Aplicação");
-		double preco = Main.sc.nextDouble();
-		App app = new App(nome, preco, tipo);
-		programador.addApp(app);
-	}
-	
 	public String getNome() 
 	{
 		return nome;
