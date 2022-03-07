@@ -19,10 +19,6 @@ public class Programador extends Utilizador
 		for(App app: apps)
 		{
 			
-			String tipo = 
-			
-			prog.addApp(apps);
-			}
 		}
 	}
 	
@@ -35,14 +31,19 @@ public class Programador extends Utilizador
 		double preco = Main.sc.nextDouble();
 		System.out.println("Tipo de Aplicação");
 		Atipo = Main.sc.nextLine();
+		TipoApp tipoEnum = TipoApp.valueOf(Atipo);
 		for(App app: apps)
 		{
 			if(app.getClass().getSimpleName().equals(Atipo))
 			{
-				App apps = new App(nomeApp, preco, Atipo);
+				App apps = new App(nomeApp, preco, tipoEnum);
+			}
+			else
+			{
+				System.out.println("Tipo de Aplicação não existente, tente de novo!");
 			}
 		}
-		return null;
+		return apps;
 	}
 	
 	public double getAvaliacao() 
