@@ -14,12 +14,6 @@ public class Programador extends Utilizador
 		apps = new ArrayList<App>();
 	}
 	
-	public void registoAPP(String nomeApp, double preco, TipoApp tipo)
-	{
-		App app = new App(nomeApp, preco, tipo);
-		apps.add(app);
-	}
-	
 	public double getAvaliacao() 
 	{
 		return avaliacao;

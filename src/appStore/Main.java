@@ -9,17 +9,26 @@ public class Main
 	
 	public static void main(String args[])
 	{
-		/*Programador prog3 = new Programador("Maria", 25);
-		Cliente cliente1 = new Cliente("Josá", 18);
+		/**/Programador prog3 = new Programador("Maria", 25);
+		Cliente cliente1 = new Cliente("José", 18);
+		Cliente cliente2 = new Cliente("Ana", 18);
 		App app1 = new App("Candy", 7.5, TipoApp.Games);
 		App app2 = new App("Netflix", 20, TipoApp.Entertainment);
 		prog3.addApp(app2);
-		prog3.addApp(app1);*/
+		prog3.addApp(app1);
+		cliente1.comprar(app2);
+		cliente2.comprar(app2);
+		cliente1.comprar(app1);
+		loja1.addUtilizador(cliente2);
+		loja1.addUtilizador(cliente1);
+		loja1.addUtilizador(prog3);
+		loja1.addApp(app2);
+		loja1.addApp(app1);
 		
 		System.out.println("\nMenu:" + "\n1 - Registar um novo utilizador" + "\n2 - Registar uma nova aplicação" + "\n3 - Lista de utilizadores"
 				+ "\n4 - Loja de Aplicações" + "\n5 - Sair");
 		
-		int opcao = Main.sc.nextInt();
+		int opcao = sc.nextInt();
 		sc.nextLine();
 	    switch (opcao) 
 	    {
@@ -67,7 +76,11 @@ public class Main
 	    				+ "\nGames" + "\nBusiness" + "\nEducation" + "\nLifestyle" + "\nEntertainment" + "\nUtilities" + "\nTravel" + "\nHealthFitness");
 	    		
 	    		String tipo = sc.nextLine();
-	    		TipoApp tipo1 = App.tipoEnum(tipo); System.out.println(tipo1);
+	    		TipoApp tipoEnum = App.tipoEnum(tipo); 
+	    		System.out.println(tipoEnum);
+	    		
+	    		App app = new App(nomeApp, preco, tipoEnum);
+	    		loja1.addApp(app);
 	    		
 	    		System.out.println("Indique o id do utilizador desejado");
 	    		int id = sc.nextInt();
@@ -77,7 +90,7 @@ public class Main
 	    			Utilizador prog = loja1.escolherUtilizador("Programador");
 	    			if(prog != null)
 	    			{
-	    				((Programador)prog).registoAPP(nomeApp, preco, tipo1); //para transformar utilizador em programador
+	    				((Programador)prog).addApp(app); //para transformar utilizador em programador
 	    			}
 	    		}
 	    		main(args);
@@ -89,7 +102,8 @@ public class Main
 	    		break;
 	    		
 	    	case 4:
-	    		
+	    		System.out.println("\nPesquisar:" + "\n1 - Por categoria" + "\n2 - Por classificação aplicação");
+	    		menuLoja();
 	    		main(args);
 	    		break;
 	    		
@@ -98,5 +112,26 @@ public class Main
 	    		break;
 	    }
 		
+	}
+
+	public static void menuLoja()
+	{
+		int opcao = sc.nextInt();
+		sc.nextLine();
+	    switch (opcao) 
+	    {
+	    	case 1:
+	    		System.out.println("Indique de entre as seguintes cateforias aquela que mais deseja:"
+	    				+ "\nGames" + "\nBusiness" + "\nEducation" + "\nLifestyle" + "\nEntertainment" + "\nUtilities" + "\nTravel" + "\nHealthFitness");
+	    		
+	    		String tipo = sc.nextLine();
+	    		TipoApp tipo1 = App.tipoEnum(tipo); 
+	    		System.out.println(tipo1);
+	    		break;
+	    		
+	    	case 2:
+	    		
+	    		break;
+	    }
 	}
 }

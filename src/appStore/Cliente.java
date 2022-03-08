@@ -1,5 +1,6 @@
 package appStore;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cliente extends Utilizador
@@ -10,6 +11,7 @@ public class Cliente extends Utilizador
 	public Cliente(String aNome, int aIdade) 
 	{
 		super(aNome, aIdade);
+		apps = new ArrayList<App>();
 	}
 	
 	public List<Compra> getCompras() 

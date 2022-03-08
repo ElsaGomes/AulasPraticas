@@ -6,23 +6,22 @@ import java.util.List;
 public class Loja 
 {
 	private List<Utilizador>utilizadores;
+	private List<App>apps;
 	
 	public Loja() 
 	{
 		utilizadores = new ArrayList<Utilizador>();
+		apps = new ArrayList<App>();
 	}
 	
-	public List<Utilizador> getUtilizadores() {
-		return utilizadores;
-	}
-
-	public void setUtilizadores(List<Utilizador> utilizadores) {
-		this.utilizadores = utilizadores;
-	}
-
 	public void addUtilizador(Utilizador aUtilizadores)
 	{
 		utilizadores.add(aUtilizadores);
+	}
+	
+	public void addApp(App aApps)
+	{
+		apps.add(aApps);
 	}
 	
 	public Utilizador escolherUtilizador(String utilizador)
@@ -61,8 +60,25 @@ public class Loja
 		
 		for(Utilizador util: utilizadores)
 		{
-			informacao += "\nNome do utilizador: " + util.getNome() + "\n" + "Idade: " + util.getIdade() + "\n" +  "Número de utilizador: " + util.getId() + "\n";			
+			informacao += "\nNome do utilizador: " + util.getNome() + "\n" + "Idade: " + util.getIdade() + 
+					"\n" +  "Número de utilizador: " + util.getId();			
 		}
 		return informacao;
 	}
+	
+	@SuppressWarnings("unlikely-arg-type")
+	public String listaAppCategoria(String aTipo)
+	{
+		String dadosApp = "";
+		for(App ap: apps)
+		{
+			if(ap.getTipo().equals(aTipo))
+			{
+				dadosApp +=  "\nNome da aplicaçao: " + ap.getNome() + "\n" + "Valor: " + ap.getPreco() + 
+						"\n" +  "Classificação: " + ap.getAvaliacao();
+			}
+		}
+		return dadosApp;
+	}
+
 }

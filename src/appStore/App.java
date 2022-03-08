@@ -32,8 +32,7 @@ public class App
 		}
 		return tipoEnum;
 	}
-		
-	
+
 	public String getNome() 
 	{
 		return nome;
