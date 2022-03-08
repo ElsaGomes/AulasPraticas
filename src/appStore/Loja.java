@@ -11,61 +11,48 @@ public class Loja
 	{
 		utilizadores = new ArrayList<Utilizador>();
 	}
+	
+	public List<Utilizador> getUtilizadores() {
+		return utilizadores;
+	}
 
-	public static void menuStore(Loja loja)
-	{
-		System.out.println("\nMenu:");
-		System.out.println("1 - Registar um novo utilizador");
-		System.out.println("2 - Registar uma nova aplicação");
-		System.out.println("3 - Lista de utilizadores");
-		System.out.println("4 - Loja de Aplicações");
-		System.out.println("5 - Sair");
-		int opcao = Main.sc.nextInt();
-	    switch (opcao) 
-	    {
-	      case 1:
-	    	  Utilizador.registoUtilizador(loja);
-	    	  break;
-	    	  
-	      case 2:
-	    	  App.registoAPP(loja);
-	    	  break;
-	        
-	      case 3:
-	    	  System.out.println(loja.getDadosUtilizador());
-	    	  Utilizador.menuSairUtilizador(loja);
-	        break;
-	        
-	      case 4:
-	    	  System.out.println(loja.getDadosUtilizador());
-	        break;
-	        
-	      case 5:
-	    	  System.exit(0);
-	        break;
-	    }
+	public void setUtilizadores(List<Utilizador> utilizadores) {
+		this.utilizadores = utilizadores;
 	}
-	
-	public static void menuSair(Loja loja)
-	{
-		System.out.println("1 - Voltar ao Menu");
-		System.out.println("2 - Sair");
-		int opcao = Main.sc.nextInt();
-	    switch (opcao) 
-	    {
-	      case 1:
-	    	  menuStore(loja);
-	    	  break;
-	    	  
-	      case 2:
-	        System.exit(0);
-	        break;
-	    }
-	}
-	
+
 	public void addUtilizador(Utilizador aUtilizadores)
 	{
 		utilizadores.add(aUtilizadores);
+	}
+	
+	public Utilizador escolherUtilizador(String utilizador)
+	{
+		for(Utilizador util: utilizadores)
+		{
+			if(util.getClass().getSimpleName().equals(utilizador))
+			{
+				return util;
+			}
+		}
+		return null;
+	}
+	
+	public Utilizador idProgramador(int prog)
+	{
+		for(Utilizador util: utilizadores)
+		{
+			if(util.getId() == prog)
+			{
+				return util;
+			}
+			
+			else
+			{
+				System.out.print("O utilizador não existe, verifique novamente!");
+				idProgramador(prog);
+			}
+		}
+		return null;
 	}
 	
 	public String getDadosUtilizador()

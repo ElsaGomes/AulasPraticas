@@ -7,6 +7,7 @@ public class App
 	private double avaliacao;
 	private TipoApp tipo;
 	
+	
 	public App(String aNome, double aPreco, TipoApp aTipo) 
 	{
 		nome = aNome;
@@ -14,11 +15,8 @@ public class App
 		tipo = aTipo;
 	}
 
-	public TipoApp tipoEnum(String Atipo)
+	public static TipoApp tipoEnum(String Atipo)
 	{
-		System.out.println("Indique qual das seguintes cateforias é aquela que mais se adequa a sua aplicação:"
-		+ "\nGames" + "\nBusiness" + "\nEducation" + "\nLifestyle" + "\nEntertainment" + "\nUtilities" + "\nTravel" + "\nHealthFitness");
-		Atipo = Main.sc.nextLine();
 		TipoApp tipoEnum = TipoApp.valueOf(Atipo);
 		
 		if(TipoApp.valueOf(Atipo) != null)

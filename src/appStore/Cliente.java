@@ -5,6 +5,7 @@ import java.util.List;
 public class Cliente extends Utilizador
 {
 	private List<Compra>compras;
+	private List<App>apps;
 	
 	public Cliente(String aNome, int aIdade) 
 	{
@@ -21,8 +22,8 @@ public class Cliente extends Utilizador
 		compras = aCompras;
 	}
 
-	public void comprar() 
+	public void comprar(App aApps) 
 	{
-		
+		apps.add(aApps);
 	}
 }

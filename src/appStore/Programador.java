@@ -14,24 +14,11 @@ public class Programador extends Utilizador
 		apps = new ArrayList<App>();
 	}
 	
-	public App registoAPP(Programador prog)
+	public void registoAPP(String nomeApp, double preco, TipoApp tipo)
 	{
-		System.out.println("Registo da Aplicação");
-		System.out.println("\nNome da Aplicação");
-		String nomeApp = Main.sc.nextLine();
-		
-		System.out.println("Preço da Aplicação");
-		double preco = Main.sc.nextDouble();
-		
-		TipoApp tipo = App.tipoEnum(nomeApp);
-		
-		for(App app: apps)
-		{
-			if()
-			App app = new App(nomeApp, preco, tipo);
-		}
+		App app = new App(nomeApp, preco, tipo);
+		apps.add(app);
 	}
-	
 	
 	public double getAvaliacao() 
 	{
