@@ -24,6 +24,19 @@ public class Loja
 		apps.add(aApps);
 	}
 	
+	public double preco(String nomeApp)
+	{
+		double preco = 0;
+		for(App ap: apps)
+		{
+			if(ap.getNome().equals(nomeApp))
+			{
+				preco = ap.getPreco();
+			}
+		}
+		return preco;
+	}
+	
 	public Utilizador escolherUtilizador(String utilizador)
 	{
 		for(Utilizador util: utilizadores)
@@ -61,7 +74,7 @@ public class Loja
 		for(Utilizador util: utilizadores)
 		{
 			informacao += "\nNome do utilizador: " + util.getNome() + "\n" + "Idade: " + util.getIdade() + 
-					"\n" +  "Número de utilizador: " + util.getId();			
+					"\n" +  "Número de utilizador: " + util.getId()+ "\n";			
 		}
 		return informacao;
 	}

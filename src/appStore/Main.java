@@ -91,7 +91,7 @@ public class Main
 	    			if(prog != null)
 	    			{
 	    				((Programador)prog).addApp(app); //para transformar utilizador em programador
-	    			}
+	    			} 
 	    		}
 	    		main(args);
 	    		break;
@@ -103,18 +103,22 @@ public class Main
 	    		
 	    	case 4:
 	    		System.out.println("\nPesquisar:" + "\n1 - Por categoria" + "\n2 - Por classificação aplicação");
-	    		menuLoja();
+	    		//menuLoja();
 	    		main(args);
 	    		break;
 	    		
 	    	case 5:
-	    		System.exit(0);
+	    		//System.exit(0);
+	    		System.out.println("Nome da Aplicação");
+	    		String nomeAp = sc.nextLine();
+	    		System.out.println(loja1.preco(nomeAp));
+	    		main(args);
 	    		break;
 	    }
 		
 	}
 
-	public static void menuLoja()
+	/*public static void menuLoja()
 	{
 		int opcao = sc.nextInt();
 		sc.nextLine();
@@ -133,5 +137,5 @@ public class Main
 	    		
 	    		break;
 	    }
-	}
+	}*/
 }
