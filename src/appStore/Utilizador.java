@@ -27,8 +27,10 @@ public class Utilizador
     	  case 1:
     		  System.out.println("Nome do utilizador");
     		  String nome = Main.sc.nextLine();
+    		  
     		  System.out.println("Idade do utilizador");
     		  int idade = Main.sc.nextInt();
+    		  
     		  Cliente cliente = new Cliente(nome, idade);
     		  loja.addUtilizador(cliente);
     		  Loja.menuSair(loja);
@@ -36,8 +38,10 @@ public class Utilizador
     		  
   	      case 2:System.out.println("Nome do utilizador");
     		  String nome1 = Main.sc.nextLine();
+    		  
     		  System.out.println("Idade do utilizador");
     		  int idade1 = Main.sc.nextInt();
+    		  
     		  Programador prog = new Programador(nome1, idade1);
     		  loja.addUtilizador(prog);
     		  Loja.menuSair(loja);

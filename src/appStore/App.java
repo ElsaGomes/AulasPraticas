@@ -14,6 +14,28 @@ public class App
 		tipo = aTipo;
 	}
 
+	public TipoApp tipoEnum(String Atipo)
+	{
+		System.out.println("Indique qual das seguintes cateforias é aquela que mais se adequa a sua aplicação:"
+		+ "\nGames" + "\nBusiness" + "\nEducation" + "\nLifestyle" + "\nEntertainment" + "\nUtilities" + "\nTravel" + "\nHealthFitness");
+		Atipo = Main.sc.nextLine();
+		TipoApp tipoEnum = TipoApp.valueOf(Atipo);
+		
+		if(TipoApp.valueOf(Atipo) != null)
+		{
+			return tipoEnum;
+		}
+		
+		else
+		{
+			System.out.println("A categoria que indicou não existe, tente de novo, "
+					+ "escolhendo de entre as categorias anteriormente referidas!");
+			tipoEnum(Atipo);
+		}
+		return tipoEnum;
+	}
+		
+	
 	public String getNome() 
 	{
 		return nome;
