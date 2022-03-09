@@ -23,13 +23,6 @@ public class App
 		{
 			return tipoEnum;
 		}
-		
-		else
-		{
-			System.out.println("A categoria que indicou não existe, tente de novo, "
-					+ "escolhendo de entre as categorias anteriormente referidas!");
-			tipoEnum(Atipo);
-		}
 		return tipoEnum;
 	}
 
