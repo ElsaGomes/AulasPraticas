@@ -17,9 +17,9 @@ public class App
 
 	public static TipoApp tipoEnum(String Atipo)
 	{
-		TipoApp tipoEnum = TipoApp.valueOf(Atipo);
+		TipoApp tipoEnum = TipoApp.valueOf(Atipo.toUpperCase());
 		
-		if(TipoApp.valueOf(Atipo) != null)
+		if(TipoApp.valueOf(Atipo.toUpperCase()) != null)
 		{
 			return tipoEnum;
 		}

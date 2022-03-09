@@ -2,12 +2,12 @@ package appStore;
 
 public enum TipoApp 
 {
-	Games, 
-	Business, 
-	Education, 
-	Lifestyle, 
-	Entertainment, 
-	Utilities, 
-	Travel, 
-	HealthFitness
+	GAMES, 
+	BUSINESS, 
+	EDUCATION, 
+	LIFESTYLE, 
+	ENTERTAINMENT, 
+	UTILITIES, 
+	TRAVEL, 
+	HEATHFITNESS
 }

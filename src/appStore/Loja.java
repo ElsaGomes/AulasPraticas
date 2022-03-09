@@ -79,16 +79,15 @@ public class Loja
 		return informacao;
 	}
 	
-	@SuppressWarnings("unlikely-arg-type")
 	public String listaAppCategoria(String aTipo)
 	{
 		String dadosApp = "";
 		for(App ap: apps)
 		{
-			if(ap.getTipo().equals(aTipo))
+			if(App.tipoEnum(aTipo) != null)
 			{
-				dadosApp +=  "\nNome da aplicaçao: " + ap.getNome() + "\n" + "Valor: " + ap.getPreco() + 
-						"\n" +  "Classificação: " + ap.getAvaliacao();
+				dadosApp +=  ap.getNome() + "\nValor: " + ap.getPreco() + "€" + 
+						"\nClassificação: " + ap.getAvaliacao();
 			}
 		}
 		return dadosApp;
