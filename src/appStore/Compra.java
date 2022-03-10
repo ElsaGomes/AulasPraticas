@@ -1,11 +1,13 @@
 package appStore;
 
 import java.util.Date;
+import java.util.List;
 
 public class Compra 
 {
 	private Date dataCompra;
 	private double preco;
+	private List<App>appsCompradas;
 	
 	public Compra(Date aDataCompra, double aPreco) 
 	{
@@ -32,4 +34,15 @@ public class Compra
 	{
 		preco = aPreco;
 	}
+
+	public List<App> getAppsCompradas() 
+	{
+		return appsCompradas;
+	}
+
+	public void setAppsCompradas(List<App> appsCompradas) 
+	{
+		this.appsCompradas = appsCompradas;
+	}
+	
 }

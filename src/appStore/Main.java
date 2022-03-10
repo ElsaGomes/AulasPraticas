@@ -20,7 +20,11 @@ public class Main
 		prog3.addApp(app2);
 		prog3.addApp(app1);
 		cliente1.comprarApp(app2);
-		cliente2.comprarApp(app2);
+		cliente2.comprarApp(app2); 
+		cliente1.avaliar("Netflix");
+		cliente2.avaliar("Netflix"); 
+		System.out.println(app2.getAvaliacao()); 
+		
 		cliente1.comprarApp(app1);
 		
 		loja1.addUtilizador(cliente2);

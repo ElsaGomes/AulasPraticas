@@ -1,12 +1,8 @@
 package appStore;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Utilizador 
 {
-	private List<Compra>compras;
-	private List<App>appsCompradas;
+	
 	private String nome;
 	private int idade;
 	private static int numUtilizador = 1;
@@ -18,8 +14,6 @@ public class Utilizador
 		idade = aIdade;
 		id = numUtilizador;
 		numUtilizador +=1;
-		compras = new ArrayList<Compra>();
-		appsCompradas = new ArrayList<App>();
 	}
 	
 	public String getNome() 
@@ -61,26 +55,5 @@ public class Utilizador
 
 	{
 		id = aId;
-	}
-	
-	public void comprar(Compra aCompra) 
-	{
-		compras.add(aCompra);
-	}
-	
-	public void comprarApp(App aApps) 
-	{
-		appsCompradas.add(aApps);
-		App.isComprada();
-	}
-	
-	public void avaliarApp(App aApps) ///////
-	{
-		
-	}
-	
-	public void comentarApp(App aApps) ////
-	{
-		
 	}
 }

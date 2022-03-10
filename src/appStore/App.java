@@ -1,5 +1,8 @@
 package appStore;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class App 
 {
 	private String nome;
@@ -7,13 +10,15 @@ public class App
 	private int avaliacao;
 	private TipoApp tipo;
 	private int numeroVendas;
-	private static boolean isComprada;
+	private List<Avaliacao>comentarios;
+	private List<Cliente>clientes;
 	
 	public App(String aNome, double aPreco, TipoApp aTipo) 
 	{
 		nome = aNome;
 		preco = aPreco;
 		tipo = aTipo;
+		comentarios = new ArrayList<Avaliacao>();
 	}
 
 	public static TipoApp tipoEnum(String Atipo)
@@ -77,13 +82,18 @@ public class App
 		this.numeroVendas = numeroVendas;
 	}
 
-	public static boolean isComprada() 
+	public List<Avaliacao> getComentarios() 
 	{
-		return isComprada;
+		return comentarios;
 	}
 
-	public void setComprada(boolean isComprada) 
+	public void setComentarios(List<Avaliacao> comentarios) 
 	{
-		this.isComprada = isComprada;
+		this.comentarios = comentarios;
+	}
+	
+	public void avaliar() 
+	{
+		avaliacao = (avaliacao + Cliente.avaliarApp(avaliacao)/clientes.size());
 	}
 }

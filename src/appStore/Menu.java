@@ -197,4 +197,22 @@ public class Menu
 			}
 		}
 	}
+
+	public static int menuAvaliar()
+	{
+		System.out.println("\nEscolha um valor inteiro entre 1 e 5");
+		int avaliacao = Main.sc.nextInt();
+		
+		if(avaliacao <=5 && avaliacao >=1)
+		{
+			return avaliacao;
+		}
+		else
+		{
+			System.out.println("\nEscolha um valor inteiro entre 1 e 5");
+			Main.sc.nextLine();
+			menuAvaliar();
+		}
+		return avaliacao;
+	}
 }
