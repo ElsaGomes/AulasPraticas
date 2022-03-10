@@ -9,7 +9,7 @@ public class Compra
 	
 	public Compra(Date aDataCompra, double aPreco) 
 	{
-		dataCompra = aDataCompra;
+		dataCompra = new  Date();
 		preco = aPreco;
 	}
 

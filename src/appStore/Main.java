@@ -19,9 +19,9 @@ public class Main
 		
 		prog3.addApp(app2);
 		prog3.addApp(app1);
-		cliente1.comprar(app2);
-		cliente2.comprar(app2);
-		cliente1.comprar(app1);
+		cliente1.comprarApp(app2);
+		cliente2.comprarApp(app2);
+		cliente1.comprarApp(app1);
 		
 		loja1.addUtilizador(cliente2);
 		loja1.addUtilizador(cliente1);

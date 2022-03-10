@@ -134,6 +134,18 @@ public class Menu
 				{
 					((Programador)prog).addApp(app); //para transformar utilizador em programador
 				} 
+				else
+				{
+					Main.sc.nextLine();
+					System.out.println("O id indicado não pertence a nenhum programador existente, verifique e tente novamente!");
+					menuInicial(aLoja);
+				}
+			}
+			else
+			{
+				Main.sc.nextLine(); 
+				System.out.println("O id indicado não pertence a nenhum utilizador existente, verifique e tente novamente!"); 
+				menuInicial(aLoja); 
 			}
 		}
 		catch(IllegalArgumentException e) 
@@ -146,6 +158,12 @@ public class Menu
 		{
 			Main.sc.nextLine(); 
 			System.out.println("Erro, os seus dados estão incorretos, tente de novo!");
+			menuInicialApp(aLoja);
+		} 
+		catch(Exception e)
+		{
+			Main.sc.nextLine(); 
+			System.out.println("O id não corresponde a nenhum programador atual, tente de novo!");
 			menuInicialApp(aLoja);
 		} 
 	}	

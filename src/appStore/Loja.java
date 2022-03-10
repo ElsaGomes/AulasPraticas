@@ -57,12 +57,6 @@ public class Loja
 			{
 				return util;
 			}
-			
-			else
-			{
-				System.out.print("O utilizador não existe, verifique novamente!");
-				idProgramador(prog);
-			}
 		}
 		return null;
 	}
