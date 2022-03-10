@@ -202,15 +202,13 @@ public class Menu
 	{
 		System.out.println("\nEscolha um valor inteiro entre 1 e 5");
 		int avaliacao = Main.sc.nextInt();
-		
 		if(avaliacao <=5 && avaliacao >=1)
 		{
 			return avaliacao;
 		}
 		else
 		{
-			System.out.println("\nEscolha um valor inteiro entre 1 e 5");
-			Main.sc.nextLine();
+			System.out.println("Erro");
 			menuAvaliar();
 		}
 		return avaliacao;

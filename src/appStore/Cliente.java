@@ -24,26 +24,17 @@ public class Cliente extends Utilizador
 		appsCompradas.add(aApps);
 	}
 	
-	public String avaliar(String aApps)
+	public int avaliar(String aApps)
 	{
+		int avaliacao = Menu.menuAvaliar();
 		for(App ap: appsCompradas)
 		{
 			if(ap.getNome().equals(aApps))
 			{
-				Menu.menuAvaliar();
-				avaliarApp(Menu.menuAvaliar());
+				ap.setAvaliacao(avaliacao);
 			}
 		}
-		return aApps;
-	}
-	
-	public static int avaliarApp(int avalicao) ///////
-	{
-		for(App ap: appsCompradas)
-		{
-			ap.setAvaliacao(avalicao);
-		}
-		return avalicao;
+		return avaliacao;
 	}
 	
 	public void comentarApp(App aApps) ////

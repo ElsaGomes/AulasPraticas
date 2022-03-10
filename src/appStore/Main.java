@@ -21,6 +21,7 @@ public class Main
 		prog3.addApp(app1);
 		cliente1.comprarApp(app2);
 		cliente2.comprarApp(app2); 
+		
 		cliente1.avaliar("Netflix");
 		cliente2.avaliar("Netflix"); 
 		System.out.println(app2.getAvaliacao()); 

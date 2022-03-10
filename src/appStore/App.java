@@ -94,6 +94,9 @@ public class App
 	
 	public void avaliar() 
 	{
-		avaliacao = (avaliacao + Cliente.avaliarApp(avaliacao)/clientes.size());
+		for(Cliente cli: clientes)
+		{
+			avaliacao = (avaliacao + cli.avaliar(nome)/clientes.size());
+		}
 	}
 }
