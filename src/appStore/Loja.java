@@ -80,8 +80,22 @@ public class Loja
 		{
 			if(App.tipoEnum(aTipo) != null)
 			{
-				dadosApp +=  ap.getNome() + "\nValor: " + ap.getPreco() + "€" + 
-						"\nClassificação: " + ap.getAvaliacao();
+				dadosApp +=  "\n" + ap.getNome() + "\nValor: " + ap.getPreco() + "€" + 
+						"\nClassificação: " + ap.getAvaliacao() + "\n";
+			}
+		}
+		return dadosApp;
+	}
+	
+	public String listaAppClassificacao(int aAvaliacao)
+	{
+		String dadosApp = "";
+		for(App ap: apps)
+		{
+			if(ap.getAvaliacao() == aAvaliacao)
+			{
+				dadosApp += "\n" + ap.getNome() + "\nValor: " + ap.getPreco() + "€" + 
+						"\nClassificação: " + ap.getAvaliacao() + "\n";
 			}
 		}
 		return dadosApp;

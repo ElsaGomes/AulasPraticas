@@ -171,7 +171,6 @@ public class Menu
 	public static void menuLoja(Loja aLoja)
 	{
 		System.out.println("\nPesquisar:" + "\n1 - Por categoria" + "\n2 - Por classificação aplicação");
-		System.out.println("Menu" + "\nPesquisar");
 		while (true)
 		{
 			int opcao = Main.sc.nextInt();
@@ -179,10 +178,12 @@ public class Menu
 			switch (opcao) 
 			{
 			case 1:
-				System.out.println("Indique como ");
+				System.out.println("Ordenar por" + "\n1 - Nome" +  "\n2 - Número de Vendas" 
+						+ "\n3 - Classificação");
 				break;
 	    		
 	    	case 2:
+	    		
 	    		break;
 	    	
 	    	case 3:

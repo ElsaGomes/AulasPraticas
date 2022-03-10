@@ -4,9 +4,10 @@ public class App
 {
 	private String nome;
 	private double preco;
-	private double avaliacao;
+	private int avaliacao;
 	private TipoApp tipo;
-	
+	private int numeroVendas;
+	private static boolean isComprada;
 	
 	public App(String aNome, double aPreco, TipoApp aTipo) 
 	{
@@ -51,7 +52,7 @@ public class App
 		return avaliacao;
 	}
 
-	public void setAvaliacao(double avaliacao) 
+	public void setAvaliacao(int avaliacao) 
 	{
 		this.avaliacao = avaliacao;
 	}
@@ -64,5 +65,25 @@ public class App
 	public void setTipo(TipoApp tipo) 
 	{
 		this.tipo = tipo;
-	}	
+	}
+
+	public int getNumeroVendas() 
+	{
+		return numeroVendas;
+	}
+
+	public void setNumeroVendas(int numeroVendas) 
+	{
+		this.numeroVendas = numeroVendas;
+	}
+
+	public static boolean isComprada() 
+	{
+		return isComprada;
+	}
+
+	public void setComprada(boolean isComprada) 
+	{
+		this.isComprada = isComprada;
+	}
 }

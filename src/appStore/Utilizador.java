@@ -71,5 +71,16 @@ public class Utilizador
 	public void comprarApp(App aApps) 
 	{
 		appsCompradas.add(aApps);
+		App.isComprada();
+	}
+	
+	public void avaliarApp(App aApps) ///////
+	{
+		
+	}
+	
+	public void comentarApp(App aApps) ////
+	{
+		
 	}
 }

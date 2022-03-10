@@ -15,7 +15,7 @@ public class Main
 		Cliente cliente2 = new Cliente("Ana", 18);
 		
 		App app1 = new App("Candy", 7.5, TipoApp.GAMES);
-		App app2 = new App("Netflix", 20, TipoApp.ENTERTAINMENT);
+		App app2 = new App("Netflix", 20, TipoApp.GAMES);
 		
 		prog3.addApp(app2);
 		prog3.addApp(app1);
@@ -28,6 +28,8 @@ public class Main
 		loja1.addUtilizador(prog3);
 		loja1.addApp(app2);
 		loja1.addApp(app1);
+		
+		System.out.println(loja1.listaAppCategoria("GAMES"));
 		
 		Menu.menuInicial(loja1);
 	}
